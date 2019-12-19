@@ -6,11 +6,22 @@ use App\Entity\User;
 use App\Entity\Users;
 use App\Services\UserService;
 use Cassandra\Type\UserType;
+use Doctrine\Common\Collections\ArrayCollection;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Template;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
+use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\HttpFoundation\Request;
+use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Component\VarDumper\VarDumper;
+
+use Symfony\Component\Serializer\Encoder\JsonEncoder;
+use Symfony\Component\Serializer\Encoder\XmlEncoder;
+use Symfony\Component\Serializer\Normalizer\ObjectNormalizer;
+use Symfony\Component\Serializer\Serializer;
+
+
+use Symfony\Component\Serializer\SerializerInterface;
 
 class UserController extends AbstractController
 {
@@ -30,11 +41,13 @@ class UserController extends AbstractController
     /**
      * @Route("/userBase", name="base")
      */
-    public function base()
+    public function base(SerializerInterface $serializer)
     {
+        $userX = $this->userService->getUserAccountById();
+        $jsonContent = $serializer->serialize($userX, 'json');
 
-        $this->userService->getUserAccountById();
-
+        //sreturn new Response($jsonContent);
+        return JsonResponse::fromJsonString($jsonContent);
     }
     /**
      * @Route("/deleteUser", name="deleteUser")

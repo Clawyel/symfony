@@ -8,6 +8,7 @@ use App\RepositoryInterfaces\UserInterface;
 use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
 use Doctrine\Common\Persistence\ManagerRegistry;
 use Doctrine\ORM\EntityManager;
+use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\VarDumper\VarDumper;
 /**
  * @method Users|null find($id, $lockMode = null, $lockVersion = null)
@@ -83,11 +84,12 @@ class UsersRepository extends ServiceEntityRepository implements UserInterface
 
 
     }
-    public function getUserAccountById()
+    public function getUserAccountById() :Users
     {
         $user = $this->findOneBy(['id' =>1]);
-        VarDumper::dump($user);
-        exit;
+        return $user;
+       // VarDumper::dump($user);
+      //  exit;
     }
     public function fetchUsersAccounts()
     {
@@ -104,8 +106,9 @@ class UsersRepository extends ServiceEntityRepository implements UserInterface
             ->where('contacts.user_id = 2');
         $query = $qb->getQuery();
         $result = $query->getResult();
-        VarDumper::dump($result);
-        exit;
+         VarDumper::dump($result);
+
+          exit;
     }
     public function fetchUsersContacts()
     {

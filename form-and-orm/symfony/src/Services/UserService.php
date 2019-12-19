@@ -20,8 +20,8 @@ final class UserService
         $this->userRepository = $usersRepository;
         $this->em = $entityManager;
     }
-    public function getUserAccountById(){
-        $this->userRepository->getUserAccountById();
+    public function getUserAccountById():Users {
+       return  $this->userRepository->getUserAccountById();
     }
     public function deleteUser($id){
         $this->userRepository->deleteUser($id);

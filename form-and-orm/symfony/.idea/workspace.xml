@@ -175,7 +175,7 @@
       <workItem from="1576476971663" duration="16097000" />
       <workItem from="1576566524679" duration="426000" />
       <workItem from="1576581964800" duration="3117000" />
-      <workItem from="1576744763434" duration="940000" />
+      <workItem from="1576744763434" duration="5998000" />
     </task>
     <servers />
   </component>
@@ -201,14 +201,15 @@
       <screen x="0" y="23" width="1280" height="709" />
     </state>
     <state x="458" y="308" key="NewPhpFileDialog/0.23.1280.709/-1920.-25.1920.1057@0.23.1280.709" timestamp="1576494244228" />
-    <state width="600" height="424" key="javadoc.popup" timestamp="1576500063884">
+    <state width="600" height="424" key="javadoc.popup" timestamp="1576759280351">
       <screen x="0" y="23" width="1280" height="709" />
     </state>
+    <state width="600" height="424" key="javadoc.popup/0.23.1280.709/-1920.-25.1920.1057@0.23.1280.709" timestamp="1576759280351" />
     <state width="600" height="424" key="javadoc.popup/0.23.1280.709@0.23.1280.709" timestamp="1576500063884" />
-    <state x="305" y="59" width="670" height="741" key="search.everywhere.popup" timestamp="1576582527442">
-      <screen x="0" y="23" width="1280" height="777" />
+    <state x="305" y="56" width="670" height="676" key="search.everywhere.popup" timestamp="1576760066198">
+      <screen x="0" y="23" width="1280" height="709" />
     </state>
-    <state x="305" y="56" width="670" height="676" key="search.everywhere.popup/0.23.1280.709/-1920.-25.1920.1057@0.23.1280.709" timestamp="1576249148439" />
+    <state x="305" y="56" width="670" height="676" key="search.everywhere.popup/0.23.1280.709/-1920.-25.1920.1057@0.23.1280.709" timestamp="1576760066198" />
     <state x="305" y="59" width="670" height="741" key="search.everywhere.popup/0.23.1280.777/-1920.-25.1920.989@0.23.1280.777" timestamp="1576582527442" />
   </component>
 </project>
